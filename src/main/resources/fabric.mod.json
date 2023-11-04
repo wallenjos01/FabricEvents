@@ -1,0 +1,24 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "environment": "*",
+    "entrypoints": { },
+    "depends": {
+        "fabricloader": "*"
+    },
+    "mixins": [
+        "fbev.mixins.json"
+    ],
+    "name": "FabricEvents",
+    "description": "A library which adds more events to Fabric servers and clients",
+    "contact": {
+        "homepage": "https://wallentines.org/"
+    },
+    "authors": [
+        {
+            "name": "M1dnight_Ninja"
+        }
+    ],
+    "license": "LGPL"
+}

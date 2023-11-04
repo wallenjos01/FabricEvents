@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.wallentines.fbev.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MixinAbstractContainerMenu",
+    "MixinCommands",
+    "MixinEntity",
+    "MixinLivingEntity",
+    "MixinMinecraftServer",
+    "MixinPlayerAdvancements",
+    "MixinServerGamePacketListener",
+    "MixinServerPlayer"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
