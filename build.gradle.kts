@@ -28,6 +28,7 @@ loom {
             server()
         }
     }
+    accessWidenerPath = file("src/main/resources/fbev.accesswidener")
 }
 
 repositories {

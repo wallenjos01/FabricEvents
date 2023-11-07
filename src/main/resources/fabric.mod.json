@@ -10,6 +10,7 @@
     "mixins": [
         "fbev.mixins.json"
     ],
+    "accessWidener": "fbev.accesswidener",
     "name": "FabricEvents",
     "description": "A library which adds more events to Fabric servers and clients",
     "contact": {

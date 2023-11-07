@@ -7,11 +7,14 @@
     "MixinAbstractContainerMenu",
     "MixinCommands",
     "MixinEntity",
+    "MixinItemStack",
     "MixinLivingEntity",
     "MixinMinecraftServer",
+    "MixinPacketListenerInteract",
     "MixinPlayerAdvancements",
     "MixinServerGamePacketListener",
-    "MixinServerPlayer"
+    "MixinServerPlayer",
+    "MixinServerPlayerGameMode"
   ],
   "client": [
   ],
