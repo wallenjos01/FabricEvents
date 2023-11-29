@@ -12,6 +12,7 @@
     "MixinMinecraftServer",
     "MixinPacketListenerInteract",
     "MixinPlayerAdvancements",
+    "MixinPlayerList",
     "MixinServerGamePacketListener",
     "MixinServerPlayer",
     "MixinServerPlayerGameMode"
