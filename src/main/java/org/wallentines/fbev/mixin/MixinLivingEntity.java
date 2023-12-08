@@ -4,14 +4,12 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.gameevent.GameEvent;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.wallentines.fbev.entity.EntityDamageEvent;
 import org.wallentines.fbev.entity.EntityDeathEvent;
@@ -35,7 +33,6 @@ public class MixinLivingEntity {
         Event.invoke(event);
 
         if(event.isCancelled()) {
-            le.gameEvent(GameEvent.EAT);
             cir.setReturnValue(itemStack);
         }
 
@@ -61,8 +58,8 @@ public class MixinLivingEntity {
         return fbev$lastDamage;
     }
 
-    @Inject(method="die", at=@At(value="INVOKE", target="Lnet/minecraft/world/damagesource/DamageSource;getEntity()Lnet/minecraft/world/entity/Entity;"))
-    private void onDeath(DamageSource damageSource, CallbackInfo ci) {
+    @Inject(method="hurt", at=@At(value="INVOKE", target="Lnet/minecraft/world/entity/LivingEntity;die(Lnet/minecraft/world/damagesource/DamageSource;)V"))
+    private void onDeath(DamageSource damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
 
         LivingEntity le = (LivingEntity) (Object) this;
         if(le.level().isClientSide) return;

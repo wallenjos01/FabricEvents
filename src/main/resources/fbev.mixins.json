@@ -9,10 +9,12 @@
     "MixinEntity",
     "MixinItemStack",
     "MixinLivingEntity",
+    "MixinMilkBucketItem",
     "MixinMinecraftServer",
     "MixinPacketListenerInteract",
     "MixinPlayerAdvancements",
     "MixinPlayerList",
+    "MixinPotionItem",
     "MixinServerGamePacketListener",
     "MixinServerPlayer",
     "MixinServerPlayerGameMode"

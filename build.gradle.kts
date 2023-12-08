@@ -43,13 +43,13 @@ repositories {
 
 dependencies {
 
-    minecraft("com.mojang:minecraft:1.20.2")
+    minecraft("com.mojang:minecraft:1.20.4")
     mappings(loom.officialMojangMappings())
 
     api("org.wallentines:midnightcfg-api:2.0.0-SNAPSHOT")
-    api("org.wallentines:midnightlib:1.3.1-SNAPSHOT")
+    api("org.wallentines:midnightlib:1.4.0-SNAPSHOT")
 
-    modImplementation("net.fabricmc:fabric-loader:0.14.21")
+    modImplementation("net.fabricmc:fabric-loader:0.15.0")
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)
